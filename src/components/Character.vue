@@ -13,10 +13,11 @@
           <b-list-group-item><span class="font-weight-bold text-danger">Mass :</span> {{character.mass}}</b-list-group-item>
           <b-list-group-item ><span class="font-weight-bold text-danger">Homeworld :</span> {{planet}}</b-list-group-item>
         </b-list-group>
-        <b-button variant="outline-danger" @click="moreInfo(character.url)">More info</b-button>
+        <b-button v-b-modal.modal-scrollable variant="outline-danger" @click="moreInfo(character.url)">More info</b-button>
       </b-card>      
     </b-card-group>
-  </b-col>         
+  </b-col>   
+       
 </template>
 
 
@@ -25,7 +26,7 @@
 import axios from 'axios';
 
 export default {
-  props:['character'],
+    props:['character'],
 
     data: function(){
     return {

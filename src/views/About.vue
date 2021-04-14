@@ -1,18 +1,18 @@
 <template>
   <div class="about">
-    <InfoCharacter/>
+    <People /> 
   </div>
 </template>
 
 
 <script>
-
-import InfoCharacter from '../components/InfoCharacter.vue'
+import People from '../components/People.vue'
 
 export default {
-  name: 'About',
+  name: 'about',
   components: {
-    InfoCharacter
+      People
   }
 }
 </script>
+
