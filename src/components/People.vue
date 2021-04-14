@@ -1,35 +1,35 @@
-<template>
-<div class="container">
-  <div class="text-center">
-    <h1>STAR WARS CHARACTERS</h1>
-  </div>
+<template >
 
-  <div >
-    <b-row class="justify-content-center" >
-      <character @showInfo="showInfo" v-for="character of characters" v-bind:key="character.id" v-bind:character="character" />
-    </b-row>
-  </div>
+  <div class="container background">
+    <div class="text-center">
+      <h1 class="font-weight-bold bigtitle">STAR WARS CHARACTERS</h1>
+    </div>
+
+    <div >
+      <b-row class="justify-content-center" >
+        <character @showInfo="showInfo" v-for="character of characters" v-bind:key="character.id" v-bind:character="character" />
+      </b-row>
+    </div>
 
     <div class="mt-5" >
-    <b-row class="justify-content-center">
-    <b-button @click="changePage(page-1)" class="m-2">Anterior</b-button>
-    <h1> <b-badge>{{page}}</b-badge></h1>
-    <b-button @click="changePage(page+1)" class="m-2">Siguiente</b-button>
-    </b-row>
-  </div>
+      <b-row class="justify-content-center">
+        <b-button @click="changePage(page-1)" class="m-2">Anterior</b-button>
+        <h1> <b-badge>{{page}}</b-badge></h1>
+        <b-button @click="changePage(page+1)" class="m-2">Siguiente</b-button>
+      </b-row>
+    </div>
 
-    <b-modal v-b-modal.modal-xl id="modal-scrollable" scrollable v-bind:title="currentCharacter.name" header-text-variant="lead font-weight-bold font-italic text-danger" >
-    <p><span class="font-weight-bold text-dark">Birth year: </span>{{currentCharacter.birth_year}} </p>
-    <p><span class="font-weight-bold text-dark">Skin color: </span>{{currentCharacter.skin_color}} </p>
-    <p><span class="font-weight-bold text-dark">Eye color: </span>{{currentCharacter.eye_color}}</p>
-    <p><span class="font-weight-bold text-dark">Gender: </span>{{currentCharacter.gender}}</p>
-    <p><span class="font-weight-bold text-dark"> Films: </span>{{films}}</p>
-    <p><span class="font-weight-bold text-dark"> Vehicles: </span>{{this.vehicles ==! [] ? "unknown" : vehicles }}</p>
-
-
+    <b-modal  v-b-modal.modal-xl id="modal-scrollable" scrollable v-bind:title="currentCharacter.name" header-text-variant="lead font-weight-bold font-italic text-danger" >
+      <p><span class="font-weight-bold text-dark">Birth year: </span>{{currentCharacter.birth_year}} </p>
+      <p><span class="font-weight-bold text-dark">Skin color: </span>{{currentCharacter.skin_color}} </p>
+      <p><span class="font-weight-bold text-dark">Eye color: </span>{{currentCharacter.eye_color}}</p>
+      <p><span class="font-weight-bold text-dark">Gender: </span>{{currentCharacter.gender}}</p>
+      <p><span class="font-weight-bold text-dark"> Films: </span>{{films}}</p>
+      <p><span class="font-weight-bold text-dark"> Vehicles: </span>{{this.vehicles ==! [] ? "unknown" : vehicles }}</p>
     </b-modal>
 
 
+  
   </div>
 </template>
 
@@ -118,4 +118,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.background {
+  background-image: url(https://genuine-lamps.com/images/windows/best-star-wars-wallpapers-30-images-to-help-you-pick-a-side_13.jpg);
+  
+}
+.bigtitle {
+ -webkit-text-stroke: 3px gold;
+  color: black;
+}
+</style>
 
