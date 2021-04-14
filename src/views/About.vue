@@ -1,5 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <InfoCharacter/>
   </div>
 </template>
+
+
+<script>
+
+import InfoCharacter from '../components/InfoCharacter.vue'
+
+export default {
+  name: 'About',
+  components: {
+    InfoCharacter
+  }
+}
+</script>
